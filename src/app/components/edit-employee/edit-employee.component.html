@@ -1,0 +1,40 @@
+<form novalidate #fo='ngForm' >
+  <div class="row">
+      <div class="form-group col-md-6">
+          <label for="fname">First name</label>
+          <input [(ngModel)]="employee.firstName" type="text" class="form-control" id="fname" name="fname" placeholder="First name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lname">Last name</label>
+          <input [(ngModel)]="employee.lastName" type="text" class="form-control" id="lname" name="lname" placeholder="Last name">
+        </div>
+  </div>
+  <div class="row">
+      <div class="form-group col-md-6">
+          <label for="email">Email address</label>
+          <input  [(ngModel)]="employee.email" type="email" class="form-control" id="email" name="email" placeholder="Email address">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="phone">Phone</label>
+          <input [(ngModel)]="employee.phone" type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+        </div>
+  </div>
+  <div class="row">
+      <div class="form-group col-md-4">
+          <label for="country">Country</label>
+          <input [(ngModel)]="employee.country" type="text" class="form-control" id="country" name="country" placeholder="Country">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="city">City</label>
+          <input [(ngModel)]="employee.city" type="text" class="form-control" id="city" name="city" placeholder="City">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="salary">Salary</label>
+            <input [(ngModel)]="employee.salary" type="text" class="form-control" id="salary" name="salary" placeholder="Salary">
+          </div>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="onSubmit(fo)">Submit</button>
+
+  {{e | json}}
+</form>
+

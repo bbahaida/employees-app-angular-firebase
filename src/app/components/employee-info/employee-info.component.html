@@ -1,0 +1,28 @@
+
+<div *ngIf="employee; else elseBlock">
+  <div class="card">
+    <div class="card-header">
+      {{employee.lastName | uppercase}} {{employee.firstName}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Salary {{employee.salary}}</h5>
+      <ul>
+        <li class="card-text">Phone : {{employee.phone}}</li>
+        <li class="card-text">Phone : {{employee.email}}</li>
+        <li class="card-text">Phone : {{employee.country}}</li>
+        <li class="card-text">Phone : {{employee.city}}</li>
+      </ul>
+      <a href="#" routerLink="/employee/edit/{{employee.$key}}" class="btn btn-success"><i class="fa fa-pencil"></i> Modify employee</a>
+    </div>
+  </div>
+</div>
+<ng-template #elseBlock>
+  <div class="card">
+    <div class="card-header">
+      Loading ....
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><img src="../../../assets/images/load.gif" /></h5>
+    </div>
+  </div>
+</ng-template>
